@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>
+		My Employee Details
+</title>
+    <script src="js/lib/angular.min.js"></script>	
+    <script src="/myApp.js"></script>	
+ 
+</head>
+<body >
+
+
+	<div id="empcontrollerview" ng-controller="empcontrollerobj">
+
+		<table>
+			<caption>Employee Creation</caption>
+			<thead>
+				<tr>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Employee Code:</td>
+					<td><input ng-model="Empcode" type="text" name="" value="" placeholder=""></td>
+				</tr>
+				<tr>
+					<td>Employee Name:</td>
+					<td><input ng-model="EmpName" type="text" name="" value="" placeholder=""></td>
+				</tr>
+				<tr>
+					<td>Employee DOB:</td>
+					<td><input ng-model="EmpDOB" type="text" name="" value="" placeholder=""></td>
+				</tr>
+				<tr>
+					<td>Employee Gender:</td>
+					<td><select ng-model="genderName" ng-options="x for x in Gender" ></select></td>
+				</tr>
+				<tr>
+					<td>Employee Email</td>
+					<td><input ng-model="eMail" type="email" name="" value="" placeholder=""></td>
+				<tr>
+				<a href="http://127.0.0.1:3000/">My Local Site </a>
+					<td></td>
+					<td><input ng-click="SendRequesttoNode(this)" type="button" name="" value="Submit"> 
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p> {{serverjson}} </p>
+		</br>
+		</br>
+		</br>
+		
+
+
+
+
+		<div> Employee Code: <input ng-model="Empcode" type="text" name="" value="" placeholder=""></div><br/>
+		<div> Employee Name: <input ng-model="EmpName" type="text" name="" value="" placeholder=""></div><br/>
+		<div> Employee DOB:  <input ng-model="EmpDOB" type="text" name="" value="" placeholder=""></div><br/>
+		<div> Employee Gender: <select ng-model="genderName" ng-options="x for x in Gender" ></select></div><br/>
+		<div> Employee Code: <input  type="button" name="" value="Reset">
+		
+		<p>
+		EmpCode:{{Empcode}}	
+		</p>
+		<p>
+		EmpName:{{EmpName}}	
+		</p>
+		EmpDOB:{{EmpDOB}}	
+		</p>
+		</p>
+		Gender:{{genderName}}	
+		</p>
+		<br />
+			<p>
+		EmpCode:<span ng-bind="Empcode">	
+		</p>
+		<p>
+		EmpName:<span ng-bind="EmpName">
+		</p>
+		EmpDOB:<span ng-bind="EmpDOB">
+		</p>
+		<br />
+
+	</div>
+	<!-- <div ng-controller="myhttpcontrollerobj">
+			<input ng-click="" type="button" name="" value="Submit"> 
+			<p> {{serverjson}} </p>
+	</div>
+		 -->
+
+
+	
+</body>
+</html>
